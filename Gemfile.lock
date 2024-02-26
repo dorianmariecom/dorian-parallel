@@ -1,18 +1,20 @@
 PATH
   remote: .
   specs:
-    dorian-each (0.3.2)
+    dorian-parallel (0.1.0)
+      parallel
 
 GEM
   remote: https://rubygems.org/
   specs:
+    parallel (1.24.0)
 
 PLATFORMS
   arm64-darwin-23
   ruby
 
 DEPENDENCIES
-  dorian-each!
+  dorian-parallel!
 
 RUBY VERSION
    ruby 3.3.0p0

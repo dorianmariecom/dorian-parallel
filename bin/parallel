@@ -1,12 +1,14 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require "parallel"
+
 if ARGV.size != 1 || ARGV[0] == "--help" || ARGV[0] == "-h"
-  puts "USAGE: ... | each CODE"
+  puts "USAGE: ... | parallel CODE"
   exit
 end
 
-$stdin.each_line do |it|
+Parallel.each($stdin.each_line.to_a) do |it|
   it.strip!
   eval(ARGV.first)
 end
