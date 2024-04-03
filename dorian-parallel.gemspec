@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "dorian-parallel"
-  s.version = "0.1.2"
+  s.version = "0.1.3"
   s.summary = "Evaluates some code on each line of the input in parallel"
   s.description =
     "#{s.summary}\n\ne.g. `ls -l | parallel \"puts it.split.first\"`"
@@ -14,4 +14,6 @@ Gem::Specification.new do |s|
   s.license = "MIT"
   s.metadata = { "rubygems_mfa_required" => "true" }
   s.add_dependency "parallel"
+
+  s.required_ruby_version = ">= 3.3.0"
 end
