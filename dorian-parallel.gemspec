@@ -14,6 +14,4 @@ Gem::Specification.new do |s|
   s.license = "MIT"
   s.metadata = { "rubygems_mfa_required" => "true" }
   s.add_dependency "parallel"
-
-  s.required_ruby_version = ">= 3.3.0"
 end
