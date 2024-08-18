@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dorian-parallel (0.2.1)
+    dorian-parallel (0.2.2)
       parallel
 
 GEM

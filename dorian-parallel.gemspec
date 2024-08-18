@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "dorian-parallel"
-  s.version = "0.2.1"
+  s.version = "0.2.2"
   s.summary = "evaluates some code on each line of the input in parallel"
   s.description = s.summary
   s.authors = ["Dorian Marié"]
