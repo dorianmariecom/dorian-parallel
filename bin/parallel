@@ -14,4 +14,6 @@ end
 
 input = parsed.files.map { |file| File.read(file) }.join("\n")
 input = $stdin.each_line.to_a.map(&:strip).join("\n") if input.empty?
-Parallel.each(input.lines.map(&:strip)) { |it| eval(parsed.arguments.join(" ")) }
+Parallel.each(input.lines.map(&:strip)) do |it|
+  eval(parsed.arguments.join(" "))
+end
