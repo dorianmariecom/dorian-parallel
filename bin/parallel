@@ -1,14 +1,17 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require "dorian/arguments"
 require "parallel"
 
-if ARGV.size != 1 || ARGV[0] == "--help" || ARGV[0] == "-h"
-  puts "USAGE: ... | parallel CODE"
-  exit
+parsed = Dorian::Arguments.parse(version: { alias: :v }, help: { alias: :h })
+
+abort parsed.help if parsed.options.help
+
+if parsed.options.version
+  abort File.read(File.expand_path("../../VERSION", __FILE__))
 end
 
-Parallel.each($stdin.each_line.to_a) do |it|
-  it.strip!
-  eval(ARGV.first)
-end
+input = parsed.files.map { |file| File.read(file) }.join("\n")
+input = $stdin.each_line.to_a.map(&:strip).join("\n") if input.empty?
+Parallel.each(input.lines.map(&:strip)) { |it| eval(parsed.arguments.join(" ")) }
