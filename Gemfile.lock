@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dorian-parallel (0.2.3)
+    dorian-parallel (1.0.0)
       dorian-arguments
       parallel
 
