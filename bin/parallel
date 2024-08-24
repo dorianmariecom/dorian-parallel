@@ -69,5 +69,3 @@ Parallel.each(inputs) do |it|
   Dorian::Eval.eval(it:, ruby:, debug:, stdout:, stderr:, colorize:)
   progress&.increment
 end
-
-puts
