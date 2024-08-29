@@ -3,6 +3,8 @@ PATH
   specs:
     dorian-parallel (1.1.1)
       dorian-arguments
+      dorian-eval
+      dorian-progress
       parallel
 
 GEM
@@ -30,6 +32,9 @@ GEM
     diff-lcs (1.5.1)
     dorian-arguments (1.1.0)
       bigdecimal
+    dorian-eval (1.1.1)
+    dorian-progress (1.0.1)
+      ruby-progressbar
     dorian-times (1.0.0)
       dorian-arguments
     drb (2.2.1)
