@@ -16,5 +16,5 @@ Gem::Specification.new do |s|
   s.add_dependency "dorian-eval"
   s.add_dependency "dorian-progress"
   s.add_dependency "parallel"
-  s.required_ruby_version = ">= 3.1"
+  s.required_ruby_version = ">= 3.0"
 end
