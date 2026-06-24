@@ -1,17 +1,35 @@
 # `dorian-parallel`
 
-Evaluates some code on each line of the input in parallel
+Run a Ruby snippet for each input line in parallel.
 
-e.g. `ls -l | parallel "puts it.split.first"`
-
-### Install
+## Install
 
 ```bash
 gem install dorian-parallel
 ```
 
-Or as part of my other gems:
+Also included in the aggregate gem:
 
 ```bash
 gem install dorian
+```
+
+## Usage
+
+```bash
+parallel [options] [file ...] "ruby code"
+```
+
+Run `parallel -h` for generated option details and `parallel -v` for the installed version.
+
+## Notes
+
+- Same model as `each`, but uses the `parallel` gem. Output order may vary.
+
+## Examples
+
+### Double numbers concurrently
+
+```bash
+printf '1\n2\n' | parallel "puts it.to_i * 2"
 ```
