@@ -12,9 +12,9 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/dorianmariecom/dorian-parallel"
   s.license = "MIT"
   s.metadata = { "rubygems_mfa_required" => "true" }
-  s.add_dependency "dorian-arguments"
-  s.add_dependency "dorian-eval"
-  s.add_dependency "dorian-progress"
-  s.add_dependency "parallel"
+  s.add_dependency "dorian-arguments", ">= 2.0.1", "< 3"
+  s.add_dependency "dorian-eval", ">= 2.0.1", "< 3"
+  s.add_dependency "dorian-progress", ">= 2.0.1", "< 3"
+  s.add_dependency "parallel", ">= 2.1.0", "< 3"
   s.required_ruby_version = ">= 4.0"
 end
